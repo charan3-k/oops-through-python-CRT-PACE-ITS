@@ -1,0 +1,23 @@
+class apgb:
+      def __init__(self):
+            self.balance=0
+            print("welcome to APGB")
+      def deposit(self):
+            amount=float(input("enter deposit amount:"))
+            self.balance+= amount 
+            print("\nAmount deposited:",amount)
+      def withdraw(self):
+            amount=float(input("enter amount to de withdrawn:"))
+            if self.balance>=amount:
+                  self.balance-=amount
+                  print("\n  you withdrew:",amount)
+            else:
+                  print("\n Insufficient balance")
+      def display(self):
+            print("\nTotal balance=",self.balance)
+
+#deriver code
+s=apgb()
+s.deposit()
+s.withdraw()
+s.display()
