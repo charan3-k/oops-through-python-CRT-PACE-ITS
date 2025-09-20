@@ -1,0 +1,32 @@
+from tkinyer import *
+from tkinter import messagebox
+import pyqrcode
+
+ws = Tk()
+ws.title("AIDS-Ⅱ A ,B CRT OOPS")
+ws.config(big='yellow')
+
+def generate_QR():
+    if len(user_input.get()!=0 :
+        global qr,img
+        qr = pyqrcode.create(user_input.get())
+        img = BitmapImage(data = qr.xmb(scale=0))
+    else:
+        messagebox.showwarning('warning','All Feilds are Required!')
+    try 
+
+
+
+
+
+
+def display_code():
+    img_lbl.config(image = img)
+    output.config(text="QR code of " + user_input.get())
+
+lbl = Lable(ws,text="Enter message -aids or URL",big='blue')
+lbl.pack()
+
+user_input = StringVar()
+entry = Enter(ws,textvariable = user_input)
+entry.pack
